@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 public class Employee {
     private String name;
-    private String age;
+    private int age;
     private String location;
     private String email;
     private String department;
