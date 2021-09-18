@@ -11,7 +11,7 @@ import java.util.List;
 
 // https requests through this  class
 @RestController
-@RequestMapping("/api/v1")
+//@RequestMapping("/api/v1")
 public class EmployeeController {
 
     @Autowired
