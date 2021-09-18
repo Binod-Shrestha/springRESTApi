@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-// https requests through this class
+// https requests through this  class
 @RestController
 public class EmployeeController {
     //localhost:8080/employees
