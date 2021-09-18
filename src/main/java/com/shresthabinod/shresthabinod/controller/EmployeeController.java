@@ -1,19 +1,28 @@
 package com.shresthabinod.shresthabinod.controller;
 
 import com.shresthabinod.shresthabinod.model.Employee;
+import com.shresthabinod.shresthabinod.service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 // https requests through this  class
 @RestController
+@RequestMapping("/api/v1")
 public class EmployeeController {
-    //localhost:8080/employees
+
+    @Autowired
+    private EmployeeService employeeService;
+
+    //localhost:8080/api/v1/employees
     @GetMapping("/employees")
-    public String getEmployees(){
-        return "Displaying the list of employee";
+    public List<Employee> getEmployees(){
+        return employeeService.getEmployee();
     }
-    //localhost:8080/employees/01
+    //localhost:8080/api/v1/employees/01
     @GetMapping("/employees/{employee_id}")
     public String getEmployee(@PathVariable long employee_id){
         return  "Getting the employee details for " + employee_id;
